@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saiba sobre o Campeonato de NFL">
+    <title>NFL 23/24</title> //* titulo
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-imagem" src="img/NFL stadium.png" height="150" width="350" alt="Logo da NFL">
+
+    </header>
+
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">National Football League</h1>
+                <h2 class="conteudo-principal-escrito-subtitulo">Saiba tudo sobra a Temporada 23/24 de NFL</h2>
+                <button class="conteudo-principal-escrito-botao"> Informações sobre a Temporada atual </button>
+            </div>
+            <img class="conteudo-principal-imagem" src="" height="475px" width="400" alt="Imagem Stadiun nfl">
+        </section>
+
+        <section class="conteudo-secundario">
+            <h3 class="conteudo-secundario-titulo">Saiba mais sobre o nosso esporte</h3>
+            <p class="conteudo-secundario-paragrafo">Calandario dos Jogos </p>
+            <p class="conteudo-secundario-paragrafo">Times</p>
+            <p class="conteudo-secundario-paragrafo">Tabela das Temporadas</p>
+
+
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+
+        <img class="rodape-imagem" src="rodape.png">
+
+    </footer>
+
+</html>
