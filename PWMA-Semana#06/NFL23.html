@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saiba sobre o Campeonato de NFL">
+    <title>NFL 23/24</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <!-- Imagem de capa -->
+        <img class="cover-image" src="img/NFL stadium.png" alt="Foto de capa da NFL">
+
+        <!-- Botão de registro e login no canto superior direito -->
+        <button class="login-button" onclick="openModal()">Cadastre-se / Login</button>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <h1>National Football League</h1>
+                <h2>Saiba tudo sobre a Temporada 23/24 da NFL</h2>
+            </article>
+        </section>
+
+        <section>
+            <h3>Saiba mais sobre o nosso esporte</h3>
+            <nav>
+                <ul>
+                    <li><a href="calnd.html" class="button">Calendário dos Jogos</a></li>
+                    <li><a href="times.html" class="button">Times</a></li>
+                    <li><a href="tabela.html" class="button">Tabela das Temporadas</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <footer>
+        <img src="rodape.png" alt="Rodapé">
+    </footer>
+
+    <!-- Janelinha modal de cadastro e login -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3>Cadastro de Usuário</h3>
+            <div class="modal-form">
+                <label for="cadastroUsername">Nome de Usuário:</label>
+                <input type="text" id="cadastroUsername" required>
+                <br>
+                <button onclick="cadastrarUsuario()">Cadastrar</button>
+            </div>
+
+            <h3>Login</h3>
+            <div class="modal-form">
+                <label for="loginUsername">Nome de Usuário:</label>
+                <input type="text" id="loginUsername" required>
+                <br>
+                <button onclick="realizarLogin()">Entrar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const usuarios = []; // Array para armazenar os usuários cadastrados
+
+        function openModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        function cadastrarUsuario() {
+            const username = document.getElementById("cadastroUsername").value;
+
+            if (!usuarios.includes(username)) {
+                usuarios.push(username);
+                alert("Cadastro realizado com sucesso!");
+                document.getElementById("cadastroUsername").value = ""; // Limpar o campo após o cadastro
+            } else {
+                alert("Este nome de usuário já está em uso. Por favor, escolha outro nome de usuário.");
+            }
+        }
+
+        function realizarLogin() {
+            const username = document.getElementById("loginUsername").value;
+
+            if (usuarios.includes(username)) {
+                alert("Login bem-sucedido!");
+                document.getElementById("loginUsername").value = ""; // Limpar o campo após o login
+            } else {
+                alert("Nome de usuário incorreto. Por favor, tente novamente.");
+            }
+        }
+
+        // Fechar a janelinha modal se o usuário clicar fora dela
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+
+</html>
